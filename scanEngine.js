@@ -51,7 +51,7 @@ async function fetchTxdotStatewideLettings() {
   const url = 'https://www.txdot.gov/business/letting-bids.html';
   console.log(`Fetching TxDOT statewide lettings from ${url}`);
   const res = await axios.get(url);
-  const $ = cheerio.load(res.data);
+const $ = load(res.data);
 
   const projects = [];
 

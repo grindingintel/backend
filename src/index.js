@@ -1,12 +1,14 @@
-import pool from './db.js';
+// index.js
+const { runTxdotScan } = require('./scanEngine');
 
-async function testConnection() {
+(async () => {
+  console.log('Starting TxDOT statewide letting scan...');
   try {
-    const result = await pool.query('SELECT NOW()');
-    console.log('Database connected:', result.rows[0]);
+    await runTxdotScan();
+    console.log('Scan finished successfully.');
+    process.exit(0);
   } catch (err) {
-    console.error('Database connection failed:', err);
+    console.error('Scan failed:', err);
+    process.exit(1);
   }
-}
-
-testConnection();
+})();

@@ -186,6 +186,4 @@ async function runTxdotScan() {
   }
 }
 
-module.exports = {
-  runTxdotScan
-};
+export { runTxdotScan };

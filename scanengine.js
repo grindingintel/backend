@@ -1,8 +1,8 @@
 // scanEngine.js
-const axios = require('axios');
-const cheerio = require('cheerio');
-const { Pool } = require('pg');
-
+import axios from 'axios';
+import cheerio from 'cheerio';
+import pkg from 'pg';
+const { Pool } = pkg;
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }

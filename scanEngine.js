@@ -1,6 +1,8 @@
 // scanEngine.js
 import axios from 'axios';
-import * as cheerio from 'cheerio';
+import { load } from 'cheerio';
+
+const $ = load(html);
 import pkg from 'pg';
 const { Pool } = pkg;
 const pool = new Pool({

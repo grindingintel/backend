@@ -1,5 +1,4 @@
-// index.js
-const { runTxdotScan } = require('./scanEngine');
+import { runTxdotScan } from './scanEngine.js';
 
 (async () => {
   console.log('Starting TxDOT statewide letting scan...');
